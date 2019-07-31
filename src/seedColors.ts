@@ -1,8 +1,13 @@
+export interface IColor {
+  name: string;
+  color: string;
+}
+
 export interface ISeedColor {
   paletteName: string;
   id: string;
   emoji: string;
-  colors: Array<{ name: string; color: string }>;
+  colors: IColor[];
 }
 
 const seedColors = [
