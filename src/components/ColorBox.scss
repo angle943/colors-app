@@ -2,7 +2,57 @@
   cursor: pointer;
   display: inline-block;
   height: 25%;
-  margin: 0 auto;
+  margin: 0 auto -3.6px;
   position: relative;
   width: 20%;
+
+  .copy-button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    height: 30px;
+    left: 50%;
+    line-height: 30px;
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+  }
+
+  &:hover .copy-button {
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .box-content {
+    bottom: 0;
+    color: black;
+    font-size: 12px;
+    left: 0;
+    letter-spacing: 1px;
+    padding: 10px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .see-more {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    bottom: 0;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 60px;
+  }
 }

@@ -7,13 +7,18 @@ interface ColorBox {
   name: string;
 }
 
-const ColorBox: React.FC<any> = props => {
+const ColorBox: React.FC<ColorBox> = props => {
   const { background, name } = props;
 
   return (
     <div className="ColorBox" style={{ background: background }}>
-      <span>{name}</span>
-      <span>MORE</span>
+      <div className="copy-container">
+        <div className="box-content">
+          <span>{name}</span>
+        </div>
+        <button className="copy-button">Copy</button>
+      </div>
+      <span className='see-more'>More</span>
     </div>
   );
 };
