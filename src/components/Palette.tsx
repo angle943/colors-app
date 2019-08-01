@@ -1,23 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import Navbar from "./Navbar";
 import ColorBox from "./ColorBox";
-import { ISeedColor } from "../seedColors";
+import { ISeedColorWithLevels } from "../colorHelpers";
 
 import "./Palette.scss";
 
-interface PaletteProps extends ISeedColor {}
+interface PaletteProps {
+  palette: ISeedColorWithLevels;
+}
 
 const Palette: React.FC<PaletteProps> = props => {
-  const { colors, emoji, id, paletteName } = props;
+  const { palette } = props;
+  const [level, setLevel] = useState<number>(500);
 
   const renderColorBoxes = (): React.ReactNode => {
-    return colors.map(color => <ColorBox background={color.color} name={color.name} />);
+    return palette.colors[level].map(color => (
+      <ColorBox key={color.hex} background={color.hex} name={color.name} />
+    ));
+  };
+
+  const changeLevel = (newLevel: number): void => {
+    setLevel(newLevel);
   };
 
   return (
     <div className="Palette">
-      <div className="Palette-colors">
-        {renderColorBoxes()}
-      </div>
+      <Navbar changeLevel={changeLevel} level={level} />
+      <div className="Palette-colors">{renderColorBoxes()}</div>
     </div>
   );
 };
