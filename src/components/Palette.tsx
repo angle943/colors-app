@@ -11,14 +11,14 @@ interface PaletteProps {
 
 const Palette: React.FC<PaletteProps> = props => {
   const { palette } = props;
+  const {colors, emoji, id, paletteName} = palette;
   const [format, setFormat] = useState<"hex" | "rgb" | "rgba">("hex");
   const [level, setLevel] = useState<number>(500);
 
   const renderColorBoxes = (): React.ReactNode => {
-    return palette.colors[level].map((color) => {
-      console.log("COLOR", color);
+    return colors[level].map((color) => {
       return (
-      <ColorBox key={color.hex} background={color[format]} name={color.name} />
+      <ColorBox key={color.id} background={color[format]} name={color.name} />
     )});
   };
 
@@ -38,6 +38,10 @@ const Palette: React.FC<PaletteProps> = props => {
         handleChange={changeFormat}
       />
       <div className="Palette-colors">{renderColorBoxes()}</div>
+      <footer className="Palette-footer">
+        {paletteName}
+        <span className="emoji">{emoji}</span>
+      </footer>
     </div>
   );
 };

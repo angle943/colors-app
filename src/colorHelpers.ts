@@ -48,6 +48,7 @@ const generatePalette = (starterPalette: ISeedColor): ISeedColorWithLevels => {
   for (const level of levels) {
     newPalette.colors[level] = [];
   }
+  console.log("STARTER PALETTE", starterPalette);
   for (const color of starterPalette.colors) {
     const scale = generateScale(color.color, 10).reverse();
     for (const i in scale) {
