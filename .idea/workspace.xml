@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4d8bcf99-2488-4171-8853-072a679f3a39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colorHelpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/colorHelpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Palette.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palette.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Palette.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palette.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PaletteList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaletteList.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +82,9 @@
       <workItem from="1564592200727" duration="926000" />
       <workItem from="1564593132674" duration="2390000" />
       <workItem from="1564624440328" duration="6050000" />
-      <workItem from="1564725622396" duration="4820000" />
+      <workItem from="1564725622396" duration="4983000" />
+      <workItem from="1564767471997" duration="1003000" />
+      <workItem from="1564768829583" duration="2172000" />
     </task>
     <servers />
   </component>
