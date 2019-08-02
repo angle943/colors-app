@@ -5,8 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Palette.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palette.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,6 +85,7 @@
       <workItem from="1564592200727" duration="926000" />
       <workItem from="1564593132674" duration="2390000" />
       <workItem from="1564624440328" duration="6050000" />
+      <workItem from="1564725622396" duration="2476000" />
     </task>
     <servers />
   </component>
