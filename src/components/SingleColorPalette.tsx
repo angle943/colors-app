@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { withStyles, WithStyles } from "@material-ui/styles";
 import ColorBox from "./ColorBox";
 import { IColorWithLevels, ISeedColorWithLevels } from "../colorHelpers";
 import Navbar from "./Navbar";
 import PaletteFooter from "./PaletteFooter";
+import styles from '../styles/PaletteStyles';
 
-interface SingleColorPaletteProps {
+interface ParentProps {
   colorId: string;
   palette: ISeedColorWithLevels;
 }
 
+type SingleColorPaletteProps = ParentProps & WithStyles<typeof styles>;
+
 const SingleColorPalette: React.FC<SingleColorPaletteProps> = props => {
-  const { colorId, palette } = props;
+  const { colorId, classes, palette } = props;
   const { emoji, id, paletteName } = palette;
   const [format, setFormat] = useState<"hex" | "rgb" | "rgba">("hex");
   const [shades, setShades] = useState<IColorWithLevels[]>([]);
@@ -42,12 +46,12 @@ const SingleColorPalette: React.FC<SingleColorPaletteProps> = props => {
   };
 
   return (
-    <div className="SingleColorPalette Palette">
+    <div className={classes.Palette}>
       <Navbar handleChange={changeFormat} />
-      <div className="Palette-colors">
+      <div className={classes.colors}>
         {shades.length && renderColorBoxes()}
-        <div className="ColorBox go-back">
-          <Link to={`/palette/${id}`} className="back-button">go back</Link>
+        <div className={classes.goBack}>
+          <Link to={`/palette/${id}`}>go back</Link>
         </div>
       </div>
       <PaletteFooter emoji={emoji} paletteName={paletteName} />
@@ -55,4 +59,4 @@ const SingleColorPalette: React.FC<SingleColorPaletteProps> = props => {
   );
 };
 
-export default SingleColorPalette;
+export default withStyles(styles)(SingleColorPalette);

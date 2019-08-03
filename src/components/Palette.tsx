@@ -1,17 +1,19 @@
 import React, { useState } from "react";
+import { WithStyles, withStyles } from "@material-ui/styles";
 import Navbar from "./Navbar";
 import ColorBox from "./ColorBox";
 import PaletteFooter from "./PaletteFooter";
 import { ISeedColorWithLevels } from "../colorHelpers";
+import styles from '../styles/PaletteStyles';
 
-import "./Palette.scss";
-
-interface PaletteProps {
+interface ParentProps {
   palette: ISeedColorWithLevels;
 }
 
+type PaletteProps = ParentProps & WithStyles<typeof styles>;
+
 const Palette: React.FC<PaletteProps> = props => {
-  const { palette } = props;
+  const { classes, palette } = props;
   const { colors, emoji, id, paletteName } = palette;
   const [format, setFormat] = useState<"hex" | "rgb" | "rgba">("hex");
   const [level, setLevel] = useState<number>(500);
@@ -38,16 +40,16 @@ const Palette: React.FC<PaletteProps> = props => {
   };
 
   return (
-    <div className="Palette">
+    <div className={classes.Palette}>
       <Navbar
         changeLevel={changeLevel}
         level={level}
         handleChange={changeFormat}
       />
-      <div className="Palette-colors">{renderColorBoxes()}</div>
+      <div className={classes.colors}>{renderColorBoxes()}</div>
       <PaletteFooter emoji={emoji} paletteName={paletteName} />
     </div>
   );
 };
 
-export default Palette;
+export default withStyles(styles)(Palette);
