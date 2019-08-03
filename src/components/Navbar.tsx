@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Slider from "rc-slider";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -11,9 +11,9 @@ import "rc-slider/assets/index.css";
 import "./Navbar.scss";
 
 interface NavbarProps {
-  changeLevel(newLevel: number): void;
+  changeLevel?(newLevel: number): void;
   handleChange(format: string): void;
-  level: number;
+  level?: number;
 }
 
 const Navbar: React.FC<NavbarProps> = props => {
@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = props => {
       <div className="logo">
         <Link to="/">reactcolorpicker</Link>
       </div>
-      <div className="slider-container">
+      {level && <div className="slider-container">
         <span>Level: {level}</span>
         <div className="slider">
           <Slider
@@ -51,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = props => {
             step={100}
           />
         </div>
-      </div>
+      </div>}
       <div className="select-container">
         <Select onChange={handleSelectChange} value={format}>
           <MenuItem value="hex">HEX - #FFFFFF</MenuItem>
@@ -63,7 +63,9 @@ const Navbar: React.FC<NavbarProps> = props => {
         anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
         open={showSnackbar}
         autoHideDuration={3000}
-        message={<span id="message-id">Format Changed to {format.toUpperCase()}!</span>}
+        message={
+          <span id="message-id">Format Changed to {format.toUpperCase()}!</span>
+        }
         ContentProps={{ "aria-describedby": "message-id" }}
         onClose={closeSnackbar}
         action={[

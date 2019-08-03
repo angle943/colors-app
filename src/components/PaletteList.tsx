@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { RouteComponentProps } from "react-router-dom";
 import MiniPalette from "./MiniPalette";
-import { createStyles, withStyles } from "@material-ui/styles";
+import {createStyles, WithStyles, withStyles} from "@material-ui/styles";
 import { ISeedColor } from "../seedColors";
 
 const styles = createStyles({
@@ -33,18 +33,16 @@ const styles = createStyles({
   }
 });
 
-interface PaletteListProps {
-  classes: {
-    root: string;
-    container: string;
-    nav: string;
-    palettes: string;
-  };
+interface PaletteListProps extends RouteComponentProps, WithStyles<typeof styles> {
   palettes: ISeedColor[];
 }
 
 const PaletteList: React.FC<PaletteListProps> = props => {
-  const { classes, palettes } = props;
+  const { classes, history, palettes } = props;
+
+  const goToPalette = (id: string): void => {
+    history.push(`/palette/${id}`);
+  };
 
   return (
     <div className={classes.root}>
@@ -54,7 +52,7 @@ const PaletteList: React.FC<PaletteListProps> = props => {
         </nav>
         <div className={classes.palettes}>
           {palettes.map(palette => (
-            <MiniPalette {...palette} />
+            <MiniPalette key={palette.id} {...palette} handleClick={goToPalette} />
           ))}
         </div>
       </div>

@@ -1,16 +1,6 @@
 import React from "react";
-import { createStyles, withStyles } from "@material-ui/styles";
+import {createStyles, WithStyles, withStyles} from "@material-ui/styles";
 import { ISeedColor } from "../seedColors";
-
-interface MiniPaletteProps extends ISeedColor {
-  classes: {
-    root: string;
-    colors: string;
-    title: string;
-    emoji: string;
-    miniColor: string;
-  };
-}
 
 const styles = createStyles({
   root: {
@@ -55,8 +45,12 @@ const styles = createStyles({
   }
 });
 
+interface MiniPaletteProps extends ISeedColor, WithStyles<typeof styles> {
+  handleClick(id: string): void;
+}
+
 const MiniPalette: React.FC<MiniPaletteProps> = props => {
-  const { colors, classes, emoji, paletteName } = props;
+  const { colors, classes, emoji, id, handleClick, paletteName } = props;
 
   const miniColorBoxes = colors.map(color => (
     <div
@@ -66,7 +60,7 @@ const MiniPalette: React.FC<MiniPaletteProps> = props => {
     />
   ));
   return (
-    <div className={classes.root}>
+    <div className={classes.root} onClick={() => handleClick(id)}>
       <div className={classes.colors}>{miniColorBoxes}</div>
       <h5 className={classes.title}>
         {paletteName} <span className={classes.emoji}>{emoji}</span>
