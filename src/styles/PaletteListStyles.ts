@@ -16,10 +16,14 @@ export default createStyles({
     width: "50%"
   },
   nav: {
+    alignItems: "center",
     color: "white",
     display: "flex",
     justifyContent: "space-between",
-    width: "100%"
+    width: "100%",
+    "& a": {
+      color: "white"
+    }
   },
   palettes: {
     display: "grid",
