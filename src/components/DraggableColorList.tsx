@@ -1,7 +1,7 @@
 import React from "react";
 import { SortableContainer } from "react-sortable-hoc";
 import DraggableColorBox from "./DraggableColorBox";
-import { INewColor } from "./NewPaletteForm";
+import { INewColor } from "./ColorPickerForm";
 
 interface ParentProps {
   colors: INewColor[];

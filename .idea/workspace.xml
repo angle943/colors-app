@@ -6,8 +6,9 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PaletteList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaletteList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/PaletteListStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/PaletteListStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DraggableColorList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DraggableColorList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewPaletteForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewPaletteForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PaletteFormNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaletteFormNav.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +89,10 @@
       <workItem from="1564725622396" duration="4983000" />
       <workItem from="1564767471997" duration="1003000" />
       <workItem from="1564768829583" duration="23277000" />
-      <workItem from="1564965157077" duration="10444000" />
+      <workItem from="1564965157077" duration="14006000" />
+      <workItem from="1565023451346" duration="211000" />
+      <workItem from="1565058394629" duration="3948000" />
+      <workItem from="1565064978024" duration="4479000" />
     </task>
     <servers />
   </component>

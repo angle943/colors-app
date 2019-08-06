@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Palette from "./Palette";
 import PaletteList from "./PaletteList";
 import SingleColorPalette from "./SingleColorPalette";
-import NewPaletteForm, {INewColorWithPaletteNameWithId} from "./NewPaletteForm";
+import NewPaletteForm from "./NewPaletteForm";
 import seedColors, { ISeedColor } from "../seedColors";
 import { generatePalette } from "../colorHelpers";
 
@@ -14,9 +14,8 @@ const App: React.FC = () => {
   const findPalette = (id: string): ISeedColor | undefined => {
     return palettes.find(palette => palette.id === id);
   };
-  const savePalette = (newPalette: INewColorWithPaletteNameWithId): void => {
-    const paletteToAdd = {...newPalette, emoji: "💩"};
-    setPalettes([...palettes, paletteToAdd]);
+  const savePalette = (newPalette: ISeedColor): void => {
+    setPalettes([...palettes, newPalette]);
   };
 
   return (
