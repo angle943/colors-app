@@ -1,7 +1,6 @@
-import { createStyles} from "@material-ui/styles";
-
-
-const drawerWidth = 400;
+import { createStyles } from "@material-ui/styles";
+import { DRAWER_WIDTH } from "../utils/constants";
+import sizes from "../utils/sizes";
 
 export default createStyles({
   root: {
@@ -14,8 +13,8 @@ export default createStyles({
     alignItems: "center"
   },
   appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth
+    width: `calc(100% - ${DRAWER_WIDTH}px)`,
+    marginLeft: DRAWER_WIDTH
   },
   menuButton: {
     marginRight: "5px"
@@ -27,9 +26,16 @@ export default createStyles({
     marginRight: "1rem",
     "& a": {
       textDecoration: "none"
+    },
+    [sizes.down("xs")]: {
+      marginRight: "0.5rem"
     }
   },
   button: {
-    margin: "0 0.5rem"
+    margin: "0 0.5rem",
+    [sizes.down("xs")]: {
+      margin: "0 0.2rem",
+      padding: "0.3rem"
+    }
   }
 });

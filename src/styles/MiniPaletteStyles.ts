@@ -8,8 +8,9 @@ export default createStyles({
     overflow: "hidden",
     padding: ".5rem",
     position: "relative",
-    "&:hover": {
-      cursor: "pointer"
+    cursor: "pointer",
+    "&:hover $deleteIcon": {
+      opacity: 1
     }
   },
   colors: {
@@ -40,5 +41,18 @@ export default createStyles({
     marginBottom: "-3.5px",
     position: "relative",
     width: "20%"
+  },
+  deleteIcon: {
+    backgroundColor: "#eb3d30",
+    color: "white",
+    height: "40px",
+    opacity: 0,
+    padding: "10px",
+    position: "absolute",
+    right: "0px",
+    top: "0px",
+    transition: "all .3s ease-in-out",
+    width: "40px",
+    zIndex: 10,
   }
 });

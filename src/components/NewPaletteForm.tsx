@@ -5,7 +5,6 @@ import clsx from "clsx";
 import DraggableColorList from "./DraggableColorList";
 import ColorPickerForm, { INewColor } from "./ColorPickerForm";
 import PaletteFormNav from "./PaletteFormNav";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
@@ -14,66 +13,8 @@ import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import { IColor, ISeedColor } from "../seedColors";
 import { PaletteMetaFormData } from "./PaletteMetaForm";
+import useStyles from '../styles/NewPaletteFormStyles';
 
-const drawerWidth = 400;
-
-export const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: "flex"
-    },
-    hide: {
-      display: "none"
-    },
-    drawer: {
-      width: drawerWidth,
-      flexShrink: 0
-    },
-    drawerPaper: {
-      width: drawerWidth,
-      display: "flex",
-      alignItems: "center"
-    },
-    drawerHeader: {
-      display: "flex",
-      alignItems: "center",
-      padding: "0 8px",
-      ...theme.mixins.toolbar,
-      justifyContent: "flex-end"
-    },
-    content: {
-      flexGrow: 1,
-      height: "calc(100vh - 64px)",
-      padding: theme.spacing(3),
-      transition: theme.transitions.create("margin", {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen
-      }),
-      marginLeft: -drawerWidth
-    },
-    contentShift: {
-      transition: theme.transitions.create("margin", {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen
-      }),
-      marginLeft: 0
-    },
-    container: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100%",
-      flexDirection: "column",
-      width: "90%"
-    },
-    buttons: {
-      width: "100%"
-    },
-    button: {
-      width: "50%"
-    }
-  })
-);
 
 interface ParentProps {
   maxColors?: number;

@@ -1,4 +1,5 @@
 import { createStyles } from "@material-ui/styles";
+import sizes from "../utils/sizes";
 
 export default createStyles({
   Navbar: {
@@ -19,6 +20,9 @@ export default createStyles({
     "& a": {
       color: "black",
       textDecoration: "none"
+    },
+    [sizes.down('xs')]: {
+      display: "none"
     }
   },
   slider: {
@@ -40,6 +44,9 @@ export default createStyles({
       marginTop: "-3px",
       outline: "none",
       width: "13px"
+    },
+    [sizes.down('md')]: {
+      width: "150px"
     }
   },
   selectContainer: {

@@ -1,5 +1,6 @@
 import {createStyles} from "@material-ui/styles";
 import chroma from "chroma-js";
+import sizes from "../utils/sizes";
 
 export interface ParentProps {
   background: string;
@@ -17,6 +18,18 @@ export default createStyles({
     "&:hover button": {
       opacity: 1,
       transition: ".5s"
+    },
+    [sizes.down("lg")]: {
+      width: "25%",
+      height: (props: ParentProps) => (props.moreUrl ? "20%" : "33.3333%")
+    },
+    [sizes.down("md")]: {
+      width: "50%",
+      height: (props: ParentProps) => (props.moreUrl ? "10%" : "20%")
+    },
+    [sizes.down("xs")]: {
+      width: "100%",
+      height: (props: ParentProps) => (props.moreUrl ? "5%" : "10%")
     }
   },
   copyText: {
@@ -117,7 +130,10 @@ export default createStyles({
       textAlign: "center",
       textShadow: "1px 2px black",
       textTransform: "uppercase",
-      width: "100%"
+      width: "100%",
+      [sizes.down("xs")]: {
+        fontSize: "6rem"
+      }
     },
     "& p": {
       fontSize: "2rem",
