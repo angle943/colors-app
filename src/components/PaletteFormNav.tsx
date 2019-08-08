@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
-import PaletteMetaForm, {PaletteMetaFormData} from "./PaletteMetaForm";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+import PaletteMetaForm, {PaletteMetaFormData} from "./PaletteMetaForm";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import { WithStyles, withStyles } from "@material-ui/styles";
+
 import { ISeedColor } from "../seedColors";
 import styles from "../styles/PaletteFormNavStyles";
-import { WithStyles, withStyles } from "@material-ui/styles";
 
 interface ParentProps {
   handleDrawerOpen(): void;

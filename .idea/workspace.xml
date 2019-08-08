@@ -3,16 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="4d8bcf99-2488-4171-8853-072a679f3a39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ColorBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ColorBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ColorPickerForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ColorPickerForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DraggableColorBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DraggableColorBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DraggableColorList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DraggableColorList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MiniPalette.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MiniPalette.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NewPaletteForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewPaletteForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Palette.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Palette.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PaletteFormNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaletteFormNav.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PaletteList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaletteList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ColorBoxStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ColorBoxStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PaletteMetaForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaletteMetaForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SingleColorPalette.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SingleColorPalette.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/DraggableColorBoxStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/DraggableColorBoxStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/MiniPaletteStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/MiniPaletteStyles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/NavbarStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/NavbarStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/PaletteFormNavStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/PaletteFormNavStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/PaletteStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/PaletteStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/PaletteListStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/PaletteListStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/sizes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/sizes.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +107,10 @@
       <workItem from="1565058394629" duration="3948000" />
       <workItem from="1565064978024" duration="4783000" />
       <workItem from="1565110093787" duration="1070000" />
-      <workItem from="1565142469698" duration="5331000" />
+      <workItem from="1565142469698" duration="5623000" />
+      <workItem from="1565217986385" duration="3803000" />
+      <workItem from="1565222897511" duration="1172000" />
+      <workItem from="1565235923570" duration="2520000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { withStyles, WithStyles } from "@material-ui/styles";
+
 import ColorBox from "./ColorBox";
-import { IColorWithLevels, ISeedColorWithLevels } from "../colorHelpers";
 import Navbar from "./Navbar";
 import PaletteFooter from "./PaletteFooter";
+
+import { IColorWithLevels, ISeedColorWithLevels } from "../colorHelpers";
 import styles from '../styles/PaletteStyles';
 
 interface ParentProps {

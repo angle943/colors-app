@@ -1,12 +1,14 @@
 import React from "react";
 import { WithStyles, withStyles } from "@material-ui/styles";
-import { ISeedColor } from "../seedColors";
 import DeleteIcon from "@material-ui/icons/Delete";
+
+import { ISeedColor } from "../seedColors";
+
 import styles from "../styles/MiniPaletteStyles";
 
 interface MiniPaletteProps extends ISeedColor, WithStyles<typeof styles> {
   handleClick(id: string): void;
-  handleDelete(id: string): void;
+  openDialog(id: string): void;
 }
 
 const MiniPalette: React.FC<MiniPaletteProps> = props => {
@@ -16,13 +18,13 @@ const MiniPalette: React.FC<MiniPaletteProps> = props => {
     emoji,
     id,
     handleClick,
-    handleDelete,
+    openDialog,
     paletteName
   } = props;
 
   const deletePalette = (e: any): void => {
     e.stopPropagation();
-    handleDelete(id);
+    openDialog(id);
   };
 
   const miniColorBoxes = colors.map(color => (

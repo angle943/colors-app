@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { WithStyles, withStyles } from "@material-ui/styles";
-import Navbar from "./Navbar";
+
 import ColorBox from "./ColorBox";
+import Navbar from "./Navbar";
 import PaletteFooter from "./PaletteFooter";
+
 import { ISeedColorWithLevels } from "../colorHelpers";
 import styles from '../styles/PaletteStyles';
 

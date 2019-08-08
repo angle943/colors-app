@@ -1,5 +1,7 @@
 import { createStyles } from "@material-ui/styles";
 import sizes from "../utils/sizes";
+import chroma from "chroma-js";
+import { ParentProps } from "../components/DraggableColorBox";
 
 export default createStyles({
   root: {
@@ -12,22 +14,25 @@ export default createStyles({
     "&:hover svg": {
       color: "white"
     },
-    [sizes.down('lg')]: {
+    [sizes.down("lg")]: {
       width: "25%",
       height: "20%"
     },
-    [sizes.down('md')]: {
+    [sizes.down("md")]: {
       width: "50%",
       height: "10%"
     },
-    [sizes.down('sm')]: {
+    [sizes.down("sm")]: {
       width: "100%",
       height: "5%"
-    },
+    }
   },
   boxContent: {
     bottom: 0,
-    color: "rgba(0,0,0,.5)",
+    color: (props: ParentProps) =>
+      chroma(props.color).luminance() <= 0.08
+        ? "rgba(255,255,255,.8)"
+        : "rgba(0,0,0,.6)",
     display: "flex",
     fontSize: "12px",
     justifyContent: "space-between",
@@ -36,7 +41,7 @@ export default createStyles({
     padding: "10px",
     position: "absolute",
     textTransform: "uppercase",
-    width: "100%",
+    width: "100%"
   },
   deleteIcon: {
     transition: "all .3s ease-in-out",

@@ -2,18 +2,22 @@ import React, { useState } from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { arrayMove } from "react-sortable-hoc";
 import clsx from "clsx";
+import Button from "@material-ui/core/Button";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+
 import DraggableColorList from "./DraggableColorList";
 import ColorPickerForm, { INewColor } from "./ColorPickerForm";
 import PaletteFormNav from "./PaletteFormNav";
-import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import { IColor, ISeedColor } from "../seedColors";
-import { PaletteMetaFormData } from "./PaletteMetaForm";
+
 import useStyles from '../styles/NewPaletteFormStyles';
+import seedColors, { IColor, ISeedColor } from "../seedColors";
+import { PaletteMetaFormData } from "./PaletteMetaForm";
+
+
 
 
 interface ParentProps {
@@ -28,7 +32,7 @@ const NewPaletteForm: React.FC<NewPaletteForm> = props => {
   const { history, maxColors = 20, palettes, savePalette } = props;
   const classes = useStyles();
   const [open, setOpen] = useState<boolean>(false);
-  const [colors, setColors] = useState<INewColor[]>(palettes[0].colors);
+  const [colors, setColors] = useState<INewColor[]>(seedColors[0].colors);
   const paletteIsFull = colors.length >= maxColors;
 
   const handleDelete = (colorName: string): void => {
@@ -75,10 +79,12 @@ const NewPaletteForm: React.FC<NewPaletteForm> = props => {
     const allColors: IColor[] = palettes.map(p => p.colors).flat();
     let rand: number;
     let randomColor: IColor;
+    let isUniqueColor = false;
     do {
       rand = Math.floor(Math.random() * allColors.length);
       randomColor = allColors[rand];
-    } while (!colors.every(({ name }) => name !== randomColor.name));
+      isUniqueColor = colors.every(({ name }) => name !== randomColor.name);
+    } while (!isUniqueColor);
     setColors([...colors, allColors[rand]]);
   };
 
@@ -144,6 +150,7 @@ const NewPaletteForm: React.FC<NewPaletteForm> = props => {
         <DraggableColorList
           axis="xy"
           colors={colors}
+          distance={20}
           handleDelete={handleDelete}
           onSortEnd={onSortEnd}
         />

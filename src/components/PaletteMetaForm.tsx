@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
 import {BaseEmoji, Picker} from "emoji-mart";
+
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+
 import { ISeedColor } from "../seedColors";
 import "emoji-mart/css/emoji-mart.css";
 
@@ -26,7 +28,7 @@ type PaletteMetaFormProps = ParentProps;
 const PaletteMetaForm: React.FC<PaletteMetaFormProps> = props => {
   const { handleSubmit, hideForm, palettes } = props;
 
-  const [stage, setStage] = React.useState<"form" | "emoji">("form");
+  const [stage, setStage] = React.useState<"form" | "emoji" | "">("form");
   const [newPaletteName, setNewPaletteName] = useState("");
 
   useEffect(() => {
@@ -47,6 +49,7 @@ const PaletteMetaForm: React.FC<PaletteMetaFormProps> = props => {
 
   const savePalette = (emoji: BaseEmoji) => {
     handleSubmit({paletteName: newPaletteName, emoji: emoji.native})
+    setStage("");
   };
 
   return (

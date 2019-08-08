@@ -45,7 +45,7 @@ export default createStyles({
       outline: "none",
       width: "13px"
     },
-    [sizes.down('md')]: {
+    [sizes.down('sm')]: {
       width: "150px"
     }
   },

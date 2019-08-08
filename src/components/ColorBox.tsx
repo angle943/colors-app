@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CopyToClipboard from "react-copy-to-clipboard";
+
 import { WithStyles, withStyles } from "@material-ui/styles";
+
 import styles, { ParentProps } from "../styles/ColorBoxStyles";
 
 type ColorBoxProps = ParentProps & WithStyles<typeof styles>;

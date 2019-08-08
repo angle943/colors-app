@@ -2,9 +2,10 @@ import React from "react";
 import { SortableElement } from "react-sortable-hoc";
 import { WithStyles, withStyles } from "@material-ui/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
+
 import styles from "../styles/DraggableColorBoxStyles";
 
-interface ParentProps {
+export interface ParentProps {
   color: string;
   handleDelete(colorName: string): void;
   name: string;
